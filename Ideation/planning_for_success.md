@@ -17,6 +17,7 @@ We are doing this for three user groups:
 
 # What can we realistically do (Meeting 2022-05-21)?
 - We will build a platform to bring together the three user groups. We will begin with electric boxes.
-- **Designers** can search and choose a spot in Berlin to apply for a painting project. Their application includes a description and an initial sketch of the proposed painting.
-- **Citizens** are notified about new applications in their neighborhood (when signing up, this info could be collected). They are allowed to submit both a rating (e.g. out of 5 stars) and review/feedback/suggestions in text form.
-- **Owners** of the objects receive both the applications and the user reviews to inform their decision on the choice of the art project.
+- **Designers** can search and choose a spot in Berlin to apply for a painting project. Their applications includes a description and an initial sketch of the proposed painting.
+- **Citizens** are notified about new applications in their neighborhood (when signing up, this info could be collected). They are allowed to submit both, a rating (e.g. out of 5 stars) and review/feedback/suggestions in text form.
+- **Owners** of the objects receive both, the applications and the user reviews to inform their decision on the choice of the art project.
+- **DL**: Analyze if a place (electric box) is painted or not and categorize painting projects (plants, people, ...)
