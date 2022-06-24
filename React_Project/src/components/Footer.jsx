@@ -16,6 +16,14 @@ import React from "react";
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
+  position: "fixed",
+  backgroundColor: "#644B96",
+  borderTop: "1px solid #E7E7E7",
+  textAlign: "center",
+  padding: "20px",
+  left: "0",
+  bottom: "0",
+  width: "100%",
 });
 
 const Search = styled("div")(({ theme }) => ({
@@ -31,14 +39,11 @@ const Icons = styled(Box)(({ theme }) => ({
 
 const Navbar = () => {
   return (
-    <AppBar position="sticky">
+    <AppBar>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { sm: "block" } }}>
           BeautifyBerlin
         </Typography>
-        <Search>
-          <InputBase placeholder="Search" />
-        </Search>
         <Icons>
           <Badge badgeContent={4} color="primary">
             <Mail color="action" />
