@@ -1,0 +1,61 @@
+.card-container{
+width: 250px;
+overflow: hidden;
+box-shadow:0px 0px 15px -5px;
+padding: 5px;
+align-items: center;
+position: 'relative'
+}
+
+.image-container img{
+    overflow: hidden;
+    width: 250px;
+    height: auto;
+}
+
+.card-content{
+    margin: 1rem;
+    margin-top: 0,5rem;
+    text-align: center;
+}
+
+h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.card-title{
+    margin-bottom:0.5rem;
+}
+
+.bottom-part{
+    display: flex;
+}
+
+.Details-btn button, .Like-btn button{
+    padding: 0.5rem;
+    background-color: whitesmoke;
+    border: none;
+    transition: 0.2s;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 40px
+}
+
+.Details-btn button:hover, .Like-btn button:hover{
+    background: rgba(255, 255, 255, 0.404);
+    transform: scale (1.1)
+}
+
+a{
+    text-transform: uppercase;
+    color: cornflowerblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Like-btn i{
+    color: cornflowerblue;
+}
+
