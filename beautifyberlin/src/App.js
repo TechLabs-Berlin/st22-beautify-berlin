@@ -1,4 +1,3 @@
-import './App.css'
 import TopBar from './components/topbar/TopBar';
 import HOF from './pages/HOF/HOF';
 
