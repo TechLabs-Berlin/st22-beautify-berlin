@@ -1,12 +1,12 @@
 import TopBar from './components/topbar/TopBar';
-import HOF from './pages/HOF/HOF';
+import SinglePage from './components/singlepage/SinglePage'
 
 function App() {
   return (
     <div className ="head">
       <>
       <TopBar />
-      <HOF />
+      <SinglePage />
       </>
     </div>
   );
