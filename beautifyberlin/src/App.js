@@ -1,12 +1,12 @@
 import TopBar from './components/topbar/TopBar';
-import SinglePage from './components/singlepage/SinglePage'
+import NewBox from './components/newbox/NewBox';
 
 function App() {
   return (
     <div className ="head">
       <>
       <TopBar />
-      <SinglePage />
+      <NewBox />
       </>
     </div>
   );
