@@ -1,10 +1,10 @@
 .imagecontainer {
   margin-top: 70px;
-  flex: 9;
+  flex: 8;
   margin-left: 100px;
 }
 
 .boximage {
-  width: 100%;
+  width: 95%;
   object-fit: contain;
 }
