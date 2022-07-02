@@ -8,6 +8,7 @@ export default function Header() {
         <span className="boxAddress">Electric Box Address</span>
         <span className="status">Current status</span>
       </div>
+      <div>close button</div>
     </div>
   );
 }

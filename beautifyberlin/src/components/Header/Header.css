@@ -1,0 +1,21 @@
+.header {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 70px;
+}
+.boxinfo {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  margin-left: 100px;
+}
+.boxid {
+  font-size: 50px;
+}
+.boxAddress,
+.status {
+  font-size: 20px;
+}
