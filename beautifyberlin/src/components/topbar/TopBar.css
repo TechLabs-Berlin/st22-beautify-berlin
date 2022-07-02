@@ -19,7 +19,7 @@ body {
 .topCenter {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .topLeft {
@@ -28,6 +28,7 @@ body {
   color: white;
   font-size: 2em;
   cursor: pointer;
+  margin-left: 100px;
 }
 
 .topCenter {
@@ -66,7 +67,7 @@ body {
   font-weight: 300;
   cursor: pointer;
   color: white;
-  font-family: "Roboto+serif";
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (max-width: 900px) {

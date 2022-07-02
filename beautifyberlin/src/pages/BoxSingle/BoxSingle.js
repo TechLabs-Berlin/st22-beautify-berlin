@@ -1,12 +1,16 @@
-import TopBar from "../../components/topbar/TopBar";
 import "./BoxSingle.css";
-import React from "react";
+import BoxImage from "../../components/BoxImage/BoxImage";
+import Sidebar from "../../components/SideBar/SideBar";
+import Header from "../../components/Header/Header";
 
 export default function BoxSingle() {
   return (
-    <div className="single">
-      <TopBar />
-      box single
-    </div>
+    <>
+      <div className="single">
+        <Header />
+        <BoxImage />
+        <Sidebar />
+      </div>
+    </>
   );
 }
