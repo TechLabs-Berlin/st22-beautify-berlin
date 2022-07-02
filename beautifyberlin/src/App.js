@@ -1,6 +1,6 @@
 import TopBar from "./components/topbar/TopBar";
 import NewBox from "./components/newbox/NewBox";
-import BoxSingle from "./BoxSingle/Boxsingle";
+import BoxSingle from "./pages/BoxSingle/BoxSingle";
 
 function App() {
   return (
