@@ -1,5 +1,4 @@
 .header {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   margin-right: 70px;
@@ -14,8 +13,18 @@
 }
 .boxid {
   font-size: 50px;
+  font-weight: 800;
+  color: #8242c2;
+  margin-bottom: 10px;
 }
 .boxAddress,
 .status {
   font-size: 20px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .boxinfo {
+    margin-left: 50px;
+  }
 }

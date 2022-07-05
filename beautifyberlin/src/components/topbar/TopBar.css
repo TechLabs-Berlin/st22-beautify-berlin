@@ -102,4 +102,7 @@ body {
   .active {
     transform: translateX(0%);
   }
+  .topLeft {
+    margin-left: 50px;
+  }
 }

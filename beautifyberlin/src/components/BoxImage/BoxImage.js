@@ -5,7 +5,7 @@ export default function BoxImage() {
     <div className="imagecontainer">
       <img
         className="boximage"
-        src="https://thumbs.dreamstime.com/z/electric-control-box-street-outdoor-city-142220222.jpg"
+        src="https://thumbs.dreamstime.com/b/high-voltage-electric-cabinet-high-voltage-electric-cabinet-town-142309865.jpg"
         alt=""
       />
     </div>

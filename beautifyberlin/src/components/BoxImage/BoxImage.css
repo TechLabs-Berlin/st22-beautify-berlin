@@ -1,5 +1,4 @@
 .imagecontainer {
-  margin-top: 70px;
   flex: 8;
   margin-left: 100px;
 }
@@ -7,4 +6,9 @@
 .boximage {
   width: 95%;
   object-fit: contain;
+}
+@media screen and (max-width: 992px) {
+  .imagecontainer {
+    margin-left: 50px;
+  }
 }

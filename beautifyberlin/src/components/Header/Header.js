@@ -1,4 +1,5 @@
 import "./Header.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Header() {
   return (
@@ -8,7 +9,6 @@ export default function Header() {
         <span className="boxAddress">Electric Box Address</span>
         <span className="status">Current status</span>
       </div>
-      <div>close button</div>
     </div>
   );
 }
