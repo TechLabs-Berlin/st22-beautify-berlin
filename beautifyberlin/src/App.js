@@ -1,15 +1,15 @@
-import TopBar from './components/topbar/TopBar';
-import NewBox from './components/newbox/NewBox';
+import TopBar from "./components/topbar/TopBar";
+import NewBox from "./pages/NewBox/NewBoxes";
 
 function App() {
   return (
-    <div className ="head">
+    <div className="head">
       <>
-      <TopBar />
-      <NewBox />
+        <TopBar />
+        <NewBox />
       </>
     </div>
   );
 }
 
-export default App
+export default App;
