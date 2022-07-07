@@ -72,7 +72,7 @@ export default function Emptyfield() {
       <TextField
         sx={{ m: 2, width: "48ch" }}
         id="outlined-multiline-static"
-        label="Describe the electric box and how it should be painted"
+        label="Describe the environment in which the box is located"
         multiline
         rows={4}
         defaultValue=""
