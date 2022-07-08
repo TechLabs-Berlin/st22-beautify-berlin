@@ -1,0 +1,27 @@
+.image-container {
+  flex: 6;
+}
+.imgdim {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px 0px 0px 10px;
+  max-width: auto;
+  max-height: 100%;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(230, 230, 230);
+  padding-right: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .card-container {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+}
