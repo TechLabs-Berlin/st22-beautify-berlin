@@ -1,12 +1,12 @@
 import TopBar from "./components/topbar/TopBar";
-import NewBox from "./pages/NewBox/NewBoxes";
+import Changestatus from "./pages/ChangeStatus/Changestatus";
 
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <NewBox />
+        <Changestatus />
       </>
     </div>
   );
