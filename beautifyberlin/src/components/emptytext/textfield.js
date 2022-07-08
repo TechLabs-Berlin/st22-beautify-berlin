@@ -1,45 +1,66 @@
 import React from "react";
+import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
+import { Button } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { InputLabel } from "@mui/material";
+import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import Popup from "../../components/Popup/Popup";
 
 export default function Emptyfield() {
-  const [reason, setReason] = React.useState("");
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  const [reason, setReason] = useState("");
 
   const handleChange = (event) => {
     setReason(event.target.value);
   };
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name && email && address) {
+      console.log(name, email, address);
+    }
+  };
+
   return (
     <>
-      <Box
-        component="form"
-        sx={{
-          "& .MuiTextField-root": {
-            m: 2,
-            width: "25ch",
-          },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <div>
+      <form onSubmit={handleSubmit}>
+        <Box
+          sx={{
+            "& .MuiTextField-root": {
+              m: 2,
+              width: "25ch",
+            },
+          }}
+          noValidate
+          autoComplete="off"
+        >
           <TextField
+            onChange={(e) => setName(e.target.value)}
             required
             id="outlined-required"
             label="First Name, Last Name"
             defaultValue=""
           />
           <TextField
+            onChange={(e) => setEmail(e.target.value)}
             required
             id="outlined-required"
             label="Email"
             defaultValue=""
           />
           <TextField
+            onChange={(e) => setAddress(e.target.value)}
             required
             id="outlined-required"
             label="Address of the Box"
@@ -73,16 +94,47 @@ export default function Emptyfield() {
               <MenuItem value={20}>Clean, but a painting suits it</MenuItem>
             </Select>
           </FormControl>
-        </div>
-      </Box>
-      <TextField
-        sx={{ m: 2, width: "48ch" }}
-        id="outlined-multiline-static"
-        label="Describe the environment in which the box is located"
-        multiline
-        rows={4}
-        defaultValue=""
-      />
+        </Box>
+        <TextField
+          sx={{ m: 2, width: "48ch" }}
+          id="outlined-multiline-static"
+          label="Describe the environment in which the box is located"
+          multiline
+          rows={4}
+          defaultValue=""
+        />
+        <p>
+          <Button
+            onClick={() => setButtonPopup(true)}
+            type="submit"
+            variant="outlined"
+            startIcon={<DoubleArrowRoundedIcon />}
+            sx={{
+              color: "black",
+              borderColor: "black",
+              margin: 2,
+              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+            }}
+          >
+            Submit
+          </Button>
+          <Button
+            variant="outlined"
+            startIcon={<HighlightOffIcon />}
+            sx={{
+              color: "black",
+              borderColor: "black",
+              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+            }}
+          >
+            Cancel
+          </Button>
+        </p>
+      </form>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <h3>Submission Succesful</h3>
+        <p>Thank you for beautifying Berlin.</p>
+      </Popup>
     </>
   );
 }

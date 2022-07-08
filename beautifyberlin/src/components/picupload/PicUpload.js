@@ -13,7 +13,6 @@ export default function PicUpload() {
           borderColor: "black",
           margin: 2,
           backgroundColor: "#f2deff",
-          borderColor: "black",
         }}
       >
         <AddIcon /> Upload a picture of any electric box
