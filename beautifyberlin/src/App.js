@@ -1,19 +1,9 @@
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import TopBar from './components/topbar/TopBar';
 import NewBox from './components/newbox/NewBox';
 =======
 import TopBar from "./components/topbar/TopBar";
-import NewBox from "./pages/NewBox/NewBoxes";
->>>>>>> Stashed changes
-=======
-import TopBar from "./components/topbar/TopBar";
-import NewBox from "./pages/NewBox/NewBoxes";
->>>>>>> Stashed changes
-=======
-import TopBar from "./components/topbar/TopBar";
-import NewBox from "./pages/NewBox/NewBoxes";
+import NewBox from "./components/newbox/NewBox";
 >>>>>>> Stashed changes
 
 function App() {
@@ -21,18 +11,8 @@ function App() {
     <div className="head">
       <>
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
       <TopBar />
       <NewBox />
-=======
-        <TopBar />
-        <NewBox />
->>>>>>> Stashed changes
-=======
-        <TopBar />
-        <NewBox />
->>>>>>> Stashed changes
 =======
         <TopBar />
         <NewBox />

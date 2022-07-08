@@ -3,18 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
     "@date-io/date-fns": "^2.14.0",
->>>>>>> Stashed changes
-=======
-    "@date-io/date-fns": "^2.14.0",
->>>>>>> Stashed changes
-=======
-    "@date-io/date-fns": "^2.14.0",
->>>>>>> Stashed changes
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
