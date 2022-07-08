@@ -30,13 +30,19 @@ export default function Emptyfield() {
           <TextField
             required
             id="outlined-required"
-            label="Full Name"
+            label="First Name, Last Name"
             defaultValue=""
           />
           <TextField
             required
             id="outlined-required"
             label="Email"
+            defaultValue=""
+          />
+          <TextField
+            required
+            id="outlined-required"
+            label="Address of the Box"
             defaultValue=""
           />
           <TextField
