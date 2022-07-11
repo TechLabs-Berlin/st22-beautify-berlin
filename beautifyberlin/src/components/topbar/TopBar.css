@@ -1,61 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .top {
-    width: 100%;
-    height: 115px;
-    background-color: #8242c2;
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .topLeft, .topRight, .topCenter {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .topLeft {
-    flex: 4;
-    font-family: 'Pacifico', cursive;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-  }
-  
-  .topCenter {
-    flex: 6;
-    font-family: 'Lora', serif;
-  }
-  
-  .topRight {
-    flex: 2;
-    justify-content: right
-  }
-  
-  .topLeft, .topRight {
-    background-color: #8242c2;
-  }
-  
-  .topIcon {
-    font-size: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    color: white
-  }
-  
-  .topList {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .topListItem {
-    margin-right: 25px;
-    font-size: 20px;
-    font-weight: 300;
-    cursor: pointer;
-    color: white
+  width: 100%;
+  height: 115px;
+  background-color: #8242c2;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.topLeft,
+.topRight,
+.topCenter {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.topLeft {
+  flex: 4;
+  font-family: "Pacifico", cursive;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topRight {
+  flex: 2;
+  justify-content: right;
+}
+
+.topLeft,
+.topRight {
+  background-color: #8242c2;
+}
+
+.topIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topListItem {
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
   }
 
+  .topIcon {
+    display: block;
+  }
+
+  .topListItem {
+    color: black;
+    font-size: 35px;
+    padding-top: 20px;
+  }
+
+  .topList {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    align-items: center;
+    width: 100%;
+    top: 115px;
+    background-color: #d8bfff;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .active {
+    transform: translateX(0%);
+  }
+
+  .topLeft {
+    margin-left: 50px;
+  }
+}

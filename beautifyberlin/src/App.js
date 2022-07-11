@@ -1,15 +1,16 @@
-import TopBar from './components/topbar/TopBar';
-import HOF from './pages/HOF/HOF';
+import TopBar from "./components/topbar/TopBar";
+import Changestatus from "./pages/ChangeStatus/Changestatus";
 
+import BoxSingle from "./pages/BoxSingle/BoxSingle";
 function App() {
   return (
-    <div className ="head">
+    <div className="head">
       <>
-      <TopBar />
-      <HOF />
+        <TopBar />
+        <Changestatus />
       </>
     </div>
   );
 }
 
-export default App
+export default App;

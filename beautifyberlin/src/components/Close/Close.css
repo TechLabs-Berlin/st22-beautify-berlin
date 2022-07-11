@@ -1,0 +1,18 @@
+.close {
+  margin: 1rem 5rem;
+  padding: 1rem 1rem;
+  text-align: right;
+  color: #8242c2;
+  cursor: pointer;
+}
+.closechild {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 992px) {
+  .close {
+    margin: 1rem 1rem;
+    padding: 1rem 0.5rem;
+    text-align: right;
+  }
+}
