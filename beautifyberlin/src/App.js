@@ -1,13 +1,21 @@
 import TopBar from "./components/topbar/TopBar";
-import Changestatus from "./pages/ChangeStatus/Changestatus";
-
+import NewBox from "./components/newbox/NewBox";
 import BoxSingle from "./pages/BoxSingle/BoxSingle";
+import Open from "./pages/Open/Open";
+import Footer from "./components/Footer/Footer";
+import Applications from "./components/Applications/Applications";
+import AppliedSingle from "./pages/AppliedSingle/AppliedSingle";
+
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <Changestatus />
+        {/* <BoxSingle /> */}
+        {/* <Open /> */}
+        {/* <Applications /> */}
+        <AppliedSingle />
+        <Footer />
       </>
     </div>
   );

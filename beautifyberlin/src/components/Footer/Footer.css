@@ -1,0 +1,9 @@
+.footer {
+  background-color: #8242c2;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
