@@ -1,15 +1,23 @@
-import TopBar from './components/topbar/TopBar';
-import HOF from './pages/HOF/HOF';
+import TopBar from "./components/topbar/TopBar";
+import BoxSingle from "./pages/BoxSingle/BoxSingle";
+import Open from "./pages/Open/Open";
+import Footer from "./components/Footer/Footer";
+import Applications from "./components/Applications/Applications";
+import AppliedSingle from "./pages/AppliedSingle/AppliedSingle";
 
 function App() {
   return (
-    <div className ="head">
+    <div className="head">
       <>
-      <TopBar />
-      <HOF />
+        <TopBar />
+        {/* <BoxSingle /> */}
+        {/* <Open /> */}
+        {/* <Applications /> */}
+        <AppliedSingle />
+        <Footer />
       </>
     </div>
   );
 }
 
-export default App
+export default App;
