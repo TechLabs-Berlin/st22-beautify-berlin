@@ -1,5 +1,4 @@
 import TopBar from "./components/topbar/TopBar";
-import NewBox from "./components/newbox/NewBox";
 import BoxSingle from "./pages/BoxSingle/BoxSingle";
 import Open from "./pages/Open/Open";
 import Footer from "./components/Footer/Footer";
