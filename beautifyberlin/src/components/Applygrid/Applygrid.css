@@ -1,0 +1,20 @@
+.grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 992px) {
+  .grid {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+  }
+}
