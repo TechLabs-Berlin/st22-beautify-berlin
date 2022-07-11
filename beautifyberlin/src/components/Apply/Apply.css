@@ -1,0 +1,17 @@
+.apply {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+@media screen and (max-width: 992px) {
+  .apply {
+    display: block;
+  }
+  .sidebar {
+    flex: 4;
+    margin-right: 20px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+}
