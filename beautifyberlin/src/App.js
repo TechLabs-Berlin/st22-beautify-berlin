@@ -1,5 +1,5 @@
 import TopBar from "./components/topbar/TopBar";
-import NewBox from "./components/newbox/NewBox";
+import Changestatus from "./pages/ChangeStatus/Changestatus";
 
 import BoxSingle from "./pages/BoxSingle/BoxSingle";
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="head">
       <>
         <TopBar />
-        <BoxSingle />
+        <Changestatus />
       </>
     </div>
   );
