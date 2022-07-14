@@ -1,0 +1,21 @@
+.section {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.main-heading {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.new {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 2rem;
+  text-align: justify;
+  text-align-last: center;
+  color: #f4e7f8;
+}

@@ -1,12 +1,12 @@
 import TopBar from "./components/topbar/TopBar";
-import NewBox from "./pages/NewBox/NewBoxes";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <NewBox />
+        <AboutUs />
       </>
     </div>
   );
