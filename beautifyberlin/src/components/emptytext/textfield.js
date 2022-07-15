@@ -34,7 +34,7 @@ export default function Emptyfield() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(handleSubmit, () => setButtonPopup(true))}>
         <Box
           sx={{
             "& .MuiTextField-root": {
@@ -105,7 +105,6 @@ export default function Emptyfield() {
         />
         <p>
           <Button
-            onClick={() => setButtonPopup(true)}
             type="submit"
             variant="outlined"
             startIcon={<DoubleArrowRoundedIcon />}
@@ -130,11 +129,11 @@ export default function Emptyfield() {
             Cancel
           </Button>
         </p>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <h3>Submission Succesful</h3>
+          <p>Thank you for beautifying Berlin.</p>
+        </Popup>
       </form>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h3>Submission Succesful</h3>
-        <p>Thank you for beautifying Berlin.</p>
-      </Popup>
     </>
   );
 }
