@@ -1,12 +1,12 @@
 import TopBar from "./components/topbar/TopBar";
-import AboutUs from "./pages/AboutUs/AboutUs";
+import LoginOwner from "./pages/LoginOwner/LoginOwner";
 
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <AboutUs />
+        <LoginOwner />
       </>
     </div>
   );
