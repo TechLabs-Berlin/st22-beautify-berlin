@@ -6,7 +6,15 @@ export default function NewBox() {
   return (
     <div>
       <>
-        <div style={{ marginLeft: 30, marginTop: 40 }}>
+        <div
+          style={{
+            margin: 30,
+            display: "block",
+            textAlign: "center",
+            border: "1px solid #8242c2",
+            borderRadius: "5px",
+          }}
+        >
           <h1>Please go through the following form:</h1>
           <PicUpload />
           <Emptyfield />
