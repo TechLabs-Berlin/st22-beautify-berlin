@@ -4,6 +4,7 @@ import React from "react";
 import "./PicUpload.css";
 import axios from "axios";
 import { useState } from "react";
+import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 
 export default function PicUpload() {
   const [quote, setQuote] = useState("");
@@ -39,6 +40,21 @@ export default function PicUpload() {
           <div>We think the box is:</div>
         </div>
         <div className="Implement">{quote ? <div>{quote}</div> : null}</div>
+      </div>
+      <div>
+        <Button
+          variant="outlined"
+          startIcon={<PublishedWithChangesIcon />}
+          sx={{
+            color: "black",
+            borderColor: "black",
+            margin: 2,
+            padding: 1,
+            "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+          }}
+        >
+          Change status
+        </Button>
       </div>
     </div>
   );
