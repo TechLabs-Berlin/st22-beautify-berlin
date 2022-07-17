@@ -1,12 +1,12 @@
 import TopBar from "./components/topbar/TopBar";
-import AboutUs from "./pages/AboutUs/AboutUs";
+import Artistapply from "./pages/Artistapply/Artistapply";
 
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <AboutUs />
+        <Artistapply />
       </>
     </div>
   );
