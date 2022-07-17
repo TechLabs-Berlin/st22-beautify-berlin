@@ -39,7 +39,7 @@ export default function Emptyfield() {
           sx={{
             "& .MuiTextField-root": {
               m: 2,
-              width: "25ch",
+              width: "80%",
             },
           }}
           noValidate
@@ -77,7 +77,11 @@ export default function Emptyfield() {
               shrink: true,
             }}
           />
-          <FormControl variant="filled" sx={{ m: 2, width: "38ch" }} required>
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "80%", textAlign: "left" }}
+            required
+          >
             <InputLabel id="demo-simple-select-filled-label">
               Why should this electric box be painted?
             </InputLabel>
@@ -96,9 +100,9 @@ export default function Emptyfield() {
           </FormControl>
         </Box>
         <TextField
-          sx={{ m: 2, width: "48ch" }}
+          sx={{ m: 2, width: "80%" }}
           id="outlined-multiline-static"
-          label="Describe the environment in which the box is located"
+          label="Please give further information about the electric box"
           multiline
           rows={4}
           defaultValue=""
