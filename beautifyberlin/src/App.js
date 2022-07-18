@@ -1,12 +1,12 @@
 import TopBar from "./components/topbar/TopBar";
-import Artistapply from "./pages/Artistapply/Artistapply";
+import LoginOwner from "./pages/LoginOwner/LoginOwner";
 
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <Artistapply />
+        <LoginOwner />
       </>
     </div>
   );
