@@ -10,7 +10,7 @@ export default function VMV() {
         <h3 className="main-heading">Vision, Mission and Values</h3>
         <div className="cards">
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <Paper
                 sx={{
                   background: "#fadef9",
@@ -26,7 +26,7 @@ export default function VMV() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <Paper
                 sx={{
                   background: "#fadef9",
@@ -42,7 +42,7 @@ export default function VMV() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <Paper
                 sx={{
                   background: "#fadef9",
