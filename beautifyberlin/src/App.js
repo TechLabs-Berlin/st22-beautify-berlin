@@ -1,12 +1,12 @@
 import TopBar from "./components/topbar/TopBar";
-import Changestatus from "./pages/ChangeStatus/Changestatus";
+import LoginOwner from "./pages/LoginOwner/LoginOwner";
 
 function App() {
   return (
     <div className="head">
       <>
         <TopBar />
-        <Changestatus />
+        <LoginOwner />
       </>
     </div>
   );

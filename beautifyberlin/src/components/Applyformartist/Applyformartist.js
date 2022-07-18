@@ -3,32 +3,21 @@ import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { InputLabel } from "@mui/material";
 import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Popup from "../../components/Popup/Popup";
 
-export default function Emptyfield() {
+export default function Applyformartist() {
   const [buttonPopup, setButtonPopup] = useState(false);
-
-  const [reason, setReason] = useState("");
-
-  const handleChange = (event) => {
-    setReason(event.target.value);
-  };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name && email && address) {
-      console.log(name, email, address);
+    if (name && email) {
+      console.log(name, email);
     }
   };
 
@@ -59,53 +48,16 @@ export default function Emptyfield() {
             label="Email"
             defaultValue=""
           />
-          <TextField
-            onChange={(e) => setAddress(e.target.value)}
-            required
-            id="outlined-required"
-            label="Address of the Box"
-            defaultValue=""
-          />
-          <TextField
-            required
-            id="datetime-local"
-            label="Time to paint"
-            type="datetime-local"
-            defaultValue="2022-07-21T10:30"
-            sx={{ width: 250 }}
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-          <FormControl
-            variant="filled"
-            sx={{ m: 2, width: "80%", textAlign: "left" }}
-            required
-          >
-            <InputLabel id="demo-simple-select-filled-label">
-              Why should this electric box be painted?
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-filled-label"
-              id="demo-simple-select-filled"
-              value={reason}
-              onChange={handleChange}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Dirty</MenuItem>
-              <MenuItem value={20}>Clean, but a painting suits it</MenuItem>
-            </Select>
-          </FormControl>
         </Box>
         <TextField
           sx={{ m: 2, width: "80%" }}
           id="outlined-multiline-static"
-          label="Please give further information about the electric box"
+          label="Describe your draft and what is special about it."
           multiline
           rows={4}
           defaultValue=""
+          required
+          inputProps={{ minLength: 50 }}
         />
         <p>
           <Button
@@ -115,11 +67,12 @@ export default function Emptyfield() {
             sx={{
               color: "black",
               borderColor: "black",
-              margin: 2,
+              marginLeft: 2,
+              marginRight: 2,
               "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
             }}
           >
-            Submit
+            Apply
           </Button>
           <Button
             variant="outlined"
