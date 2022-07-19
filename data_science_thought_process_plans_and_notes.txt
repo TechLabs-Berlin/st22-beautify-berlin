@@ -1,7 +1,7 @@
 ##### COMMENTS ABOUT PLANNING, NOTES AND DECISION MAKING FROM ipynbs #####
 # comments I did not want to remain in the original notebooks, but which are still valuable
 
-From ipynb "data_preparation"
+# From ipynb "data_preparation"
 -Basically, I made all of the decisions and took notes here or at least wrote down all of the feasible options. Implement all of this in the form of code now.
 label all of the remaining rows in the data set in the branch "mock data", then commit, push, merge into main and pull changes into this branch ("data_preparation"), because the data set is not up to date yet
 empty user ratings will be interpreted as nan by python -> handle this! I would say filling with average does not make sense, but a missing user rating definitely influenced my decision. Maybe fill with a new label, 
@@ -16,7 +16,7 @@ In that case, I would, e.g., assign 1 to the lowest category of this order and e
 If I cannot find another one, I must cut down on my columns/features (, which won't be a huge problem, but which is unfortunate).
 Alternatively, I could also generate synthetic data with sklearn, which contains only numerical data, but the problem here is, that while this may work well for the ML algorithm, it would not be meaningful data...
 
-From short note: Data preparation
+# From short note: Data preparation
 
 user ratings: fill na with 0, because a missing ratio makes it harder to get aproved and rest of data is continuous numerical
 alternatively, I could fill with 2.5, but I think that would make less sense, because I did not like approving unrated ones. 
@@ -35,3 +35,90 @@ make the categories continuous and numerical, because sklearn needs it
 Label is "approval": 0 is not approved, 1 is approved.
 
 drop artwork-ID, because it has no influence on approval
+
+"""
+Things still to do:
+
+-fill NaN in column "userRating" with 0
+-replace all of the categories with numerical values. 
+    least likely to be approved gets 1
+    most likely to be approved gets highest value (=number of options)
+    rank remaining categories accordingly
+-make sure all of the columns are numerical as opposed to character
+
+"""
+
+# Things still needed to be done
+-merge all of the branches into main
+-deploy the ML algorithm (using Heroku)
+-in the notebook about mock data preparation, remove mutated vowels from the district names (e.g. Schöneberg to Schoneberg). Maybe do this directly in gitub.
+
+-
+# split the data into training and test sets
+# remember that 650/1000 are labeled yet. Either label remaining ones or shorten the set
+# training data  is for training the algorithm 
+# test set is for evaluating the algorithm
+# both must be strictly separated
+
+# features are type, district, environment, countArtists, experience, replaced, content, user rating
+# label is "approved"
+# select features and label e.g. like this 
+# features = data[["type", "district", "..."]]
+# label = data["approved"]
+# or as in the example: features is called X and label is called y
+# They did it like that:
+# X = fruits[["mass", "width", "height"]]
+# y = fruits["fruit_label"]
+# They then split the data like this: 
+# X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0) 
+# note that random state is for setting seed and this is necessary because they work for a large audience that wants to reproduce the result. 
+# I may not need this parameter, depending on if I want to get a new result each time or not.
+# Alright, to reliably assess, you even NEED to have a look at multiple splits!
+
+
+-
+# visualisations
+# to see range of values, outliers and so on (or actually less in my example, because the values are categorical lol)
+# try to see if a potential algorithm is likely to be able to classify the data -> a well defined cluster should be visible
+
+# good plots to visualise the data: 
+# 1) feature-pair plot
+# their code:
+from matplotlib import cm
+cmap = cm.get_cmap("gnuplot")
+scatter = pd.scatter_matrix(X_train, c = y_train, marker = "o", s = 40, hist_kwds = {"bins":15}, figsize = (12, 12), cmap = cmap)
+# furthermore: 
+# just look at for example how many of the artworks are paintings and the distribution over the districts.
+# the data is synthetic, so this is basically meaningless.
+# because of that, e.g., compare it to the probabilities that I set.
+
+-
+# MACHINE LEARNING ALGORITHM LEARNING, OPTIONS, DECISION MAKING AND BRAINSTORM
+# THIS BRANCH AND FILE IS FOR DATA PREPARATION, WRITE THE ACTUAL ML PART IN IT'S OWN BRANCH AND FILE
+# THIS CELL IS JUST TO TAKE NOTES AND SO ON 
+"""
+ML algorithm options
+-k-nearest neighbors: instance or memory based learning
+Would likely work for my data set
+Likely pretty easy: k=1 (one nearest neighbor)
+It needs: a distance metric, k (how many nearest neighbors), weighting function on the neighbor points (not all neigh. have same influence), method for aggregating classes of neighbor points (how to combine influence and decide)
+Distance: scikit uses euclidian distance per default
+Neighbors: e.g. 5 (odd -> no tie -> no weighting necessary)
+Weighting: not necessary, when k/2=0.5
+Aggregation: Majority vote
+Use-case/code in the video: about knn
+-decision tree would also be very nice
+BUT scikit learn can only handle numeric features and beyond that, it will interpret them as continuous numeric variables.
+The problem I have here, namely that some of my features are discrete categorical strings, will thus not be solved by using decision trees in scikit learn or just substituting them by numbers, because they have no order
+-> use knn, it will be more practical, since we had several hours of teaching about that and only 19 min about decision trees.
+
+Assess the performance of the algorithm later on:
+e.g. compute accuracy of the classifier -> score method
+Also (if I will actually use knn,) try different values for k and then assess accuracy, because overfitting IS an issue!
+Also assess using different splits of the data set into training and test set. 
+-> Cross validation -> There is a function for this (cross_val_score()) and I do not need to do this via hardcoding. 
+Cross validation takes time, but my data set is pretty small, so just do it, since it has benefits. 
+Code for assessing can be found in the second notebook of the ML part.
+A good test score (with good = close to 1) will be more important than a good train score for this.
+"""
+
