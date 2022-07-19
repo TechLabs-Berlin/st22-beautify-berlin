@@ -1,0 +1,21 @@
+* {
+  margin: O;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(closest-side, #e66464a9, #8242c2);
+}

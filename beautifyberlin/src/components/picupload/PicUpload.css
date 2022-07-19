@@ -1,0 +1,10 @@
+.AILine {
+  margin: 0 auto;
+}
+
+.Implement {
+  display: inline-block;
+  border: 1px solid red;
+  margin: 0.2em;
+  width: 150px;
+}
