@@ -9,6 +9,7 @@ import Open from "./pages/Open/Open";
 import NewApply from "./pages/NewApply/NewApply";
 import { Routes, Route, Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function App() {
   // const user = false;
