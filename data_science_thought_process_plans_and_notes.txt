@@ -1,0 +1,37 @@
+##### COMMENTS ABOUT PLANNING, NOTES AND DECISION MAKING FROM ipynbs #####
+# comments I did not want to remain in the original notebooks, but which are still valuable
+
+From ipynb "data_preparation"
+-Basically, I made all of the decisions and took notes here or at least wrote down all of the feasible options. Implement all of this in the form of code now.
+label all of the remaining rows in the data set in the branch "mock data", then commit, push, merge into main and pull changes into this branch ("data_preparation"), because the data set is not up to date yet
+empty user ratings will be interpreted as nan by python -> handle this! I would say filling with average does not make sense, but a missing user rating definitely influenced my decision. Maybe fill with a new label, 
+because I actually kinda handled it like that. If it had no label, chances were slimmer to get approval.
+-hen have a look at the columns and so on. In this branch, the columns are a bit silly, but this may get resolved by pulling the real data set. Still, check it out when it comes to loading the data.
+Later on, when I use the data for the ML algorithm, I do not need all of the columns. For example, I do not actually need the ID, I think. I should think about dropping it here or I just keep it in the data set and 
+later just select the needed columns.
+-In case I will actually use knn (which currently really is the most likely option), then I cannot just use categorical data in form of strings.
+I then need to convert it to numbers. This, however is ONLY possible (possible meaning that the outcome will make any sense still), if there is some natural order in the data. 
+In that case, I would, e.g., assign 1 to the lowest category of this order and e.g., 5 to the highest.
+-This also means that I cannot use all of my columns. Maybe I will find another classification option which is able to use categories or I will just select the useful ones.
+If I cannot find another one, I must cut down on my columns/features (, which won't be a huge problem, but which is unfortunate).
+Alternatively, I could also generate synthetic data with sklearn, which contains only numerical data, but the problem here is, that while this may work well for the ML algorithm, it would not be meaningful data...
+
+From short note: Data preparation
+
+user ratings: fill na with 0, because a missing ratio makes it harder to get aproved and rest of data is continuous numerical
+alternatively, I could fill with 2.5, but I think that would make less sense, because I did not like approving unrated ones. 
+
+make the categories continuous and numerical, because sklearn needs it
+-type: from least to most probability of approval (e.g. painting is best -> highest numerical category)
+-district: three categories: conservative/don't like graffiti (e.g. Charlottenburg, Mitte), neutral and liberal/like graffiti (e.g. Friedrichshain-Kreuzberg). And in general it is easier to get approved in the liberal districts. So, C-burg and so on should get 1 or 0 and, neutral should get one more and then the liberal districts should get the highest value, since it is easiest to get approved. Maybe even introduce 4 or 5 categories. Disclaimer: This is MY personal bias and does not necessarily reflect the views of "Beautify Berlin". The bias may be untrue, but I really just needed some data to work with and a lot of time already was spent on looking for data. This, however did not yield any results and after several weeks, I really did not have any other choice and needed something which could be used as input for an algorithm and so needed some kind of bias. And even if there was no bias or if I got a wrong one, I still needed to introduce one. If I did not, an algorithm would not be able to learn from the data (or at least nothing meaningful).
+-environment: also here, from least to most likely of getting approved. e.g. side street is easier than mainstreet, which is easier than public spot and so on. 
+-countArtist already is numerical. More is good. 
+-In general, all categories will be of the same type now. High numerical value is representative of easier approval. This then aligns with naturally numerical features like e.g., countArtist or userRating
+-experience: same here. first time is 1 or 0, professional is highest.
+-replaced: Stickers and tags are easiest to replace, then nothing, then weathered graffiti and so on. Recent painting is valued by authorities and also, why would you overwrite it? Only chance is when you are a professional and when the district does not like it.
+-content: This one is hard to make continuous. I may need to ditch it.
+-userRating: Self explanatory. Already numerical and continuous.
+
+Label is "approval": 0 is not approved, 1 is approved.
+
+drop artwork-ID, because it has no influence on approval
