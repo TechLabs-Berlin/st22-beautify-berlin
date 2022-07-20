@@ -5,13 +5,23 @@ body {
 
 .top {
   width: 100%;
-  height: 115px;
+  height: 90px;
   background-color: #8242c2;
   position: sticky;
   top: 0;
-  display: flex;
   align-items: center;
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+.mainnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-right: 150px;
+  margin-left: 50px;
 }
 
 .topLeft,
@@ -19,24 +29,32 @@ body {
 .topCenter {
   text-align: center;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .topLeft {
-  flex: 4;
   font-family: "Pacifico", cursive;
   color: white;
   font-size: 2em;
-  cursor: pointer;
+  margin-left: 50px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
 }
 
 .topCenter {
-  flex: 6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
 .topRight {
-  flex: 2;
   justify-content: right;
+  margin-right: 50px;
 }
 
 .topLeft,
@@ -50,6 +68,7 @@ body {
   cursor: pointer;
   color: white;
   display: none;
+  align-items: center;
 }
 
 .topList {
@@ -61,21 +80,26 @@ body {
 }
 
 .topListItem {
-  margin-right: 25px;
+  margin-right: 75px;
   font-size: 20px;
   font-weight: 300;
-  cursor: pointer;
   color: white;
-  font-family: "Roboto+serif";
+  font-family: "Roboto", sans-serif;
+}
+.topListItem:hover {
+  color: rgb(251, 221, 241);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1127px) {
   body {
     overflow-x: hidden;
   }
 
   .topIcon {
     display: block;
+  }
+  .top {
+    justify-content: space-between;
   }
 
   .topListItem {
@@ -89,10 +113,11 @@ body {
     right: 0px;
     display: flex;
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
+    width: 100vw;
     align-items: center;
     width: 100%;
-    top: 115px;
+    top: 90px;
     background-color: #d8bfff;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
@@ -100,5 +125,27 @@ body {
 
   .active {
     transform: translateX(0%);
+  }
+
+  .topLeft {
+    margin-left: 50px;
+  }
+}
+.account {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.accountchild {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+}
+@media screen and (max-width: 1127px) {
+  .account {
+    display: none;
   }
 }
