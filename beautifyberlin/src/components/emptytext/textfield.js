@@ -1,3 +1,4 @@
+import "./textfield.css";
 import React from "react";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
@@ -10,6 +11,14 @@ import { InputLabel } from "@mui/material";
 import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Popup from "../../components/Popup/Popup";
+import {
+  doc,
+  serverTimestamp,
+  setDoc,
+  addDoc,
+  collection,
+} from "firebase/firestore";
+import { db } from "../../firebase";
 
 export default function Emptyfield() {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -32,9 +41,23 @@ export default function Emptyfield() {
     }
   };
 
+  const handleAdd = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await addDoc(collection(db, "cities"), {
+        name: "Los Angeles",
+        state: "CA",
+        country: "USA",
+        timeStamp: serverTimestamp(),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
-      <form onSubmit={(handleSubmit, () => setButtonPopup(true))}>
+      <form onSubmit={(handleAdd, handleSubmit, () => setButtonPopup(true))}>
         <Box
           sx={{
             "& .MuiTextField-root": {
@@ -69,7 +92,7 @@ export default function Emptyfield() {
           <TextField
             required
             id="datetime-local"
-            label="Time to paint"
+            label="Time of inspection"
             type="datetime-local"
             defaultValue="2022-07-21T10:30"
             sx={{ width: 250 }}
@@ -83,7 +106,7 @@ export default function Emptyfield() {
             required
           >
             <InputLabel id="demo-simple-select-filled-label">
-              Why should this electric box be painted?
+              Environment
             </InputLabel>
             <Select
               labelId="demo-simple-select-filled-label"
@@ -94,8 +117,11 @@ export default function Emptyfield() {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={10}>Dirty</MenuItem>
-              <MenuItem value={20}>Clean, but a painting suits it</MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -110,24 +136,28 @@ export default function Emptyfield() {
         <p>
           <Button
             type="submit"
-            variant="outlined"
+            variant="filled"
             startIcon={<DoubleArrowRoundedIcon />}
             sx={{
-              color: "black",
-              borderColor: "black",
+              color: "white",
               margin: 2,
-              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+              backgroundColor: "#8242c2",
+              paddingLeft: 5,
+              paddingRight: 5,
+              "&:hover": {
+                backgroundColor: "#9e64d7",
+              },
             }}
           >
             Submit
           </Button>
           <Button
-            variant="outlined"
+            variant="filled"
             startIcon={<HighlightOffIcon />}
             sx={{
               color: "black",
-              borderColor: "black",
-              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+              margin: 2,
+              backgroundColor: "#d8d8d8",
             }}
           >
             Cancel
@@ -137,6 +167,7 @@ export default function Emptyfield() {
           <h3>Submission Succesful</h3>
           <p>Thank you for beautifying Berlin.</p>
         </Popup>
+        <div className="space"></div>
       </form>
     </>
   );

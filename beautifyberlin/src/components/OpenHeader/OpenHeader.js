@@ -4,10 +4,12 @@ import MapIcon from "@mui/icons-material/Map";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Container from "@mui/material/Container";
+import { Link } from "react-router-dom";
 
 export default function OpenHeader() {
   return (
     <div className="openheader">
+      <h2 className="pagetitle">Welcome to Beautify Berlin!</h2>
       <div className="filter-subnav-inner">
         <div className="left">
           <Button
@@ -25,7 +27,7 @@ export default function OpenHeader() {
               },
               color: "white",
               "&:hover": {
-                backgroundColor: "#611fa3",
+                backgroundColor: "#9e64d7",
                 boxShadow: "none",
                 color: "white",
               },
@@ -40,6 +42,7 @@ export default function OpenHeader() {
             <li className="filterli">Electric Box</li>
             <li className="filterli">Wall</li>
             <li className="filterli">Tree</li>
+            <li className="filterli">Other</li>
           </ul>
         </div>
         <div className="right">
@@ -66,7 +69,12 @@ export default function OpenHeader() {
               },
             }}
           >
-            Upload Place
+            <Link
+              to="/upload"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Upload Place
+            </Link>
           </Button>
         </div>
       </div>

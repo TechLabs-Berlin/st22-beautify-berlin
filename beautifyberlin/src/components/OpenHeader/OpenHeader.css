@@ -4,6 +4,14 @@
   padding-right: 50px;
   padding-left: 50px;
 }
+.pagetitle {
+  background-color: rgb(221, 221, 221);
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: rgb(71, 71, 71);
+  border-radius: 10px;
+}
 .filter-subnav-inner {
   display: flex;
   justify-content: space-between;
@@ -31,7 +39,7 @@
   font-weight: 600;
 }
 .filterli {
-  margin-right: 40px;
+  margin-right: 20px;
   padding: 10px;
 }
 .filter-categories {
