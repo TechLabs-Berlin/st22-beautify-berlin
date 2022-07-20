@@ -8,7 +8,7 @@ export default function NewBox() {
       <>
         <div
           style={{
-            margin: 30,
+            margin: 50,
             display: "block",
             textAlign: "center",
             border: "1px solid #8242c2",

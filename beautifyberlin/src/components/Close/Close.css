@@ -3,11 +3,20 @@
   padding: 1rem 1rem;
   text-align: right;
   color: #8242c2;
-  cursor: pointer;
 }
 .closechild {
   display: inline-block;
   vertical-align: middle;
+}
+.btn {
+  background-color: white;
+  color: #8242c2;
+  border: 0;
+}
+.btn:hover {
+  background-color: white;
+  color: #9e64d7;
+  cursor: pointer;
 }
 @media screen and (max-width: 992px) {
   .close {

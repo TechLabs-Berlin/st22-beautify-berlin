@@ -9,6 +9,7 @@ import { Container } from "@mui/system";
 import Grid from "@mui/material/Grid";
 import OpenGrid from "../../components/OpenGrid/OpenGrid";
 import OpenHeader from "../../components/OpenHeader/OpenHeader";
+import Applications from "../../components/Applications/Applications";
 
 export default function ApplicationsPage() {
   return (
