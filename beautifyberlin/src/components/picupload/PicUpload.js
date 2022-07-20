@@ -13,6 +13,7 @@ import {
 import { v4 } from "uuid";
 import "./PicUpload.css";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
+import { Link } from "react-router-dom";
 
 export default function PicUpload() {
   const [imageUpload, setImageUpload] = useState(null);
@@ -21,9 +22,9 @@ export default function PicUpload() {
   const uploadFile = () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageUrls((prev) => [...prev, url]);
+    uploadBytes(imageRef, imageUpload).then(snapshot => {
+      getDownloadURL(snapshot.ref).then(url => {
+        setImageUrls(prev => [...prev, url]);
       });
     });
   };
@@ -52,7 +53,7 @@ export default function PicUpload() {
         <AddIcon /> Choose a picture of any electric box
         <input
           type="file"
-          onChange={(event) => {
+          onChange={event => {
             setImageUpload(event.target.files[0]);
           }}
           hidden
@@ -74,14 +75,14 @@ export default function PicUpload() {
         <AddIcon />
         <input
           type="file"
-          onChange={(event) => {
+          onChange={event => {
             setImageUpload(event.target.files[0]);
           }}
           hidden
         />
       </Button>
 
-      {imageUrls.map((url) => {
+      {imageUrls.map(url => {
         return <img src={url} />;
       })}
       <Button
@@ -111,19 +112,21 @@ export default function PicUpload() {
       </div>
 
       <div className="AILine">
-        <Button
-          variant="filled"
-          component="label"
-          startIcon={<PublishedWithChangesIcon />}
-          sx={{
-            color: "black",
-            margin: 2,
-            backgroundColor: "#d8d8d8",
-            padding: 1,
-          }}
-        >
-          Change status
-        </Button>
+        <Link to="/status" className="link">
+          <Button
+            variant="filled"
+            component="label"
+            startIcon={<PublishedWithChangesIcon />}
+            sx={{
+              color: "black",
+              margin: 2,
+              backgroundColor: "#d8d8d8",
+              padding: 1,
+            }}
+          >
+            Change status
+          </Button>
+        </Link>
       </div>
     </div>
   );
