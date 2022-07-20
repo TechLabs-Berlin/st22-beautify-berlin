@@ -21,6 +21,7 @@ body {
   align-items: center;
   text-align: center;
   margin-right: 150px;
+  margin-left: 50px;
 }
 
 .topLeft,
@@ -89,7 +90,7 @@ body {
   color: rgb(251, 221, 241);
 }
 
-@media screen and (max-width: 1022px) {
+@media screen and (max-width: 1127px) {
   body {
     overflow-x: hidden;
   }
@@ -116,7 +117,7 @@ body {
     width: 100vw;
     align-items: center;
     width: 100%;
-    top: 115px;
+    top: 90px;
     background-color: #d8bfff;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
@@ -143,7 +144,7 @@ body {
   vertical-align: middle;
   font-size: 18px;
 }
-@media screen and (max-width: 1022px) {
+@media screen and (max-width: 1127px) {
   .account {
     display: none;
   }
