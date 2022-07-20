@@ -25,7 +25,7 @@ export default function Emptyfield() {
 
   const [reason, setReason] = useState("");
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setReason(event.target.value);
   };
 
@@ -33,7 +33,15 @@ export default function Emptyfield() {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
 
-  const handleAdd = async e => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name && email && address) {
+      console.log(name, email, address);
+    }
+  };
+
+  const handleAdd = async (e) => {
     e.preventDefault();
     try {
       const res = await addDoc(collection(db, "cities"), {
@@ -45,14 +53,11 @@ export default function Emptyfield() {
     } catch (err) {
       console.log(err);
     }
-    // if (name && email && address) {
-    //   console.log(name, email, address);
-    // }
   };
 
   return (
     <>
-      <form onSubmit={handleAdd}>
+      <form onSubmit={(handleAdd, handleSubmit, () => setButtonPopup(true))}>
         <Box
           sx={{
             "& .MuiTextField-root": {
@@ -64,21 +69,21 @@ export default function Emptyfield() {
           autoComplete="off"
         >
           <TextField
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
             id="outlined-required"
             label="First Name, Last Name"
             defaultValue=""
           />
           <TextField
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
             id="outlined-required"
             label="Email"
             defaultValue=""
           />
           <TextField
-            onChange={e => setAddress(e.target.value)}
+            onChange={(e) => setAddress(e.target.value)}
             required
             id="outlined-required"
             label="Address of the Box"
@@ -87,7 +92,7 @@ export default function Emptyfield() {
           <TextField
             required
             id="datetime-local"
-            label="Time to paint"
+            label="Time of inspection"
             type="datetime-local"
             defaultValue="2022-07-21T10:30"
             sx={{ width: 250 }}
@@ -101,7 +106,7 @@ export default function Emptyfield() {
             required
           >
             <InputLabel id="demo-simple-select-filled-label">
-              Why should this electric box be painted?
+              Environment
             </InputLabel>
             <Select
               labelId="demo-simple-select-filled-label"
@@ -112,8 +117,11 @@ export default function Emptyfield() {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={10}>Dirty</MenuItem>
-              <MenuItem value={20}>Clean, but a painting suits it</MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -129,13 +137,13 @@ export default function Emptyfield() {
           <Button
             type="submit"
             variant="filled"
-            endIcon={<DoubleArrowRoundedIcon />}
+            startIcon={<DoubleArrowRoundedIcon />}
             sx={{
               color: "white",
               margin: 2,
               backgroundColor: "#8242c2",
-              paddingLeft: 10,
-              paddingRight: 10,
+              paddingLeft: 5,
+              paddingRight: 5,
               "&:hover": {
                 backgroundColor: "#9e64d7",
               },

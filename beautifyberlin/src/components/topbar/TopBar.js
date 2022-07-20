@@ -44,10 +44,11 @@ export default function TopBar() {
                 About
               </NavLink>
             </li>
+            <li className="topListItem">Owner Login</li>
           </ul>
         </div>
         <div className="account">
-          <span className="accountchild">Account</span>
+          <span className="accountchild">My Account</span>
           <Avatar
             sx={{ width: 50, height: 50 }}
             src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

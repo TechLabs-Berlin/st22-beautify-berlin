@@ -21,9 +21,9 @@ export default function PicUpload() {
   const uploadFile = () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then(snapshot => {
-      getDownloadURL(snapshot.ref).then(url => {
-        setImageUrls(prev => [...prev, url]);
+    uploadBytes(imageRef, imageUpload).then((snapshot) => {
+      getDownloadURL(snapshot.ref).then((url) => {
+        setImageUrls((prev) => [...prev, url]);
       });
     });
   };
@@ -35,11 +35,7 @@ export default function PicUpload() {
     });
   };
   return (
-    <div>
-
-
-
-
+    <div className="AILine">
       <Button
         onClick={uploadImage}
         variant="filled"
@@ -48,18 +44,44 @@ export default function PicUpload() {
           color: "black",
           margin: 2,
           backgroundColor: "#d8d8d8",
+          ["@media (max-width:780px)"]: {
+            display: "none",
+          },
         }}
       >
-        <AddIcon /> Choose image
+        <AddIcon /> Choose a picture of any electric box
         <input
           type="file"
-          onChange={event => {
+          onChange={(event) => {
             setImageUpload(event.target.files[0]);
           }}
           hidden
         />
       </Button>
-      {imageUrls.map(url => {
+      <Button
+        onClick={uploadImage}
+        variant="filled"
+        component="label"
+        sx={{
+          color: "black",
+          margin: 2,
+          backgroundColor: "#d8d8d8",
+          ["@media (min-width:780px)"]: {
+            display: "none",
+          },
+        }}
+      >
+        <AddIcon />
+        <input
+          type="file"
+          onChange={(event) => {
+            setImageUpload(event.target.files[0]);
+          }}
+          hidden
+        />
+      </Button>
+
+      {imageUrls.map((url) => {
         return <img src={url} />;
       })}
       <Button
@@ -68,8 +90,8 @@ export default function PicUpload() {
           color: "white",
           margin: 2,
           backgroundColor: "#8242c2",
-          paddingLeft: 10,
-          paddingRight: 10,
+          paddingLeft: 5,
+          paddingRight: 5,
           "&:hover": {
             backgroundColor: "#9e64d7",
           },
@@ -79,84 +101,30 @@ export default function PicUpload() {
         Upload
       </Button>
 
-
-
-      <div className="AILine">
-        <Button
-          variant="outlined"
-          component="label"
-          sx={{
-            color: "black",
-            borderColor: "black",
-            margin: 2,
-            backgroundColor: "#f2deff",
-            ["@media (max-width:780px)"]: {
-              display: "none",
-            },
-          }}
-        >
-          <AddIcon />
-          Upload a picture of any electric box
-          <input type="file" hidden />
-        </Button>
-        <Button
-          variant="outlined"
-          component="label"
-          sx={{
-            color: "black",
-            borderColor: "black",
-            margin: 2,
-            backgroundColor: "#f2deff",
-            ["@media (min-width:780px)"]: {
-              display: "none",
-            },
-          }}
-        >
-          <AddIcon />
-          <input type="file" hidden />
-        </Button>
-        <div>
-          <div className="Implement">
-            <div>We think the box is:</div>
-          </div>
-          <div className="Implement">
-            <div>AIAIAI</div>
-          </div>
+      <div>
+        <div className="Implement">
+          <div>We think the box is:</div>
         </div>
-        <div className="AILine">
-          <Button
-            variant="outlined"
-            startIcon={<PublishedWithChangesIcon />}
-            sx={{
-              color: "black",
-              borderColor: "black",
-              margin: 2,
-              padding: 1,
-              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
-              ["@media (max-width:780px)"]: {
-                display: "none",
-              },
-            }}
-          >
-            Change status
-          </Button>
-          <Button
-            variant="outlined"
-            startIcon={<PublishedWithChangesIcon />}
-            sx={{
-              color: "black",
-              borderColor: "black",
-              margin: 2,
-              padding: 1,
-              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
-              ["@media (min-width:780px)"]: {
-                display: "none",
-              },
-            }}
-          ></Button>
+        <div className="Implement">
+          <div>AIAIAI</div>
         </div>
       </div>
 
+      <div className="AILine">
+        <Button
+          variant="filled"
+          component="label"
+          startIcon={<PublishedWithChangesIcon />}
+          sx={{
+            color: "black",
+            margin: 2,
+            backgroundColor: "#d8d8d8",
+            padding: 1,
+          }}
+        >
+          Change status
+        </Button>
+      </div>
     </div>
   );
 }

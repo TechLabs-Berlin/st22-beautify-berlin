@@ -6,7 +6,6 @@ import BoxSingle from "./pages/BoxSingle/BoxSingle";
 import NewBoxes from "./pages/NewBox/NewBoxes";
 import AppliedSingle from "./pages/AppliedSingle/AppliedSingle";
 import Open from "./pages/Open/Open";
-import NewApply from "./pages/NewApply/NewApply";
 import { Routes, Route, Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -21,7 +20,6 @@ function App() {
         <Route path="/applications" element={<ApplicationsPage />} />
         <Route path="/applied/:appliedId" element={<AppliedSingle />} />
         <Route path="/upload" element={<NewBoxes />} />
-        <Route path="/uploadapply" element={<NewApply />} />
         <Route path="/post/:postId" element={<BoxSingle />} />
       </Routes>
       <Footer />
