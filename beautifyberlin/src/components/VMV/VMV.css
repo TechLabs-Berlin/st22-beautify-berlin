@@ -1,0 +1,22 @@
+.section {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.main-heading {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.cards {
+  text-align: center;
+  line-height: 2rem;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}

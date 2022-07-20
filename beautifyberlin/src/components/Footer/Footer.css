@@ -1,9 +1,12 @@
 .footer {
   background-color: #8242c2;
-  height: 100px;
+  height: 30px;
   text-align: center;
-  line-height: 100px;
+  line-height: 30px;
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
 }
