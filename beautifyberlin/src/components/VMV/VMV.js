@@ -17,6 +17,7 @@ export default function VMV() {
                   padding: "1px",
                   paddingLeft: "20px",
                   paddingRight: "20px",
+                  margin: "5px",
                 }}
               >
                 <h4>Vision</h4>
@@ -33,6 +34,7 @@ export default function VMV() {
                   padding: "1px",
                   paddingLeft: "20px",
                   paddingRight: "20px",
+                  margin: "5px",
                 }}
               >
                 <h4>Mission</h4>
@@ -49,6 +51,7 @@ export default function VMV() {
                   padding: "1px",
                   paddingLeft: "20px",
                   paddingRight: "20px",
+                  margin: "5px",
                 }}
               >
                 <h4>Values</h4>

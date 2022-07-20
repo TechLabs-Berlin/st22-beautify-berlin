@@ -12,6 +12,7 @@ import Applypost from "../Applypost/Applypost";
 export default function Applications() {
   return (
     <Container maxWidth={false}>
+      <h2 className="pagetitle2">Already applied projects!</h2>
       <Grid
         container
         rowSpacing={2}

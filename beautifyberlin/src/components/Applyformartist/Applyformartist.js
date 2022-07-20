@@ -2,7 +2,13 @@ import React from "react";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
 import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Popup from "../../components/Popup/Popup";
@@ -59,28 +65,214 @@ export default function Applyformartist() {
           required
           inputProps={{ minLength: 50 }}
         />
+
+        <box>
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">Type</InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              District
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              Environment
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              Number Artist
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              Experience
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              Replaced
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              Content
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "20%", textAlign: "left" }}
+            required
+          >
+            <InputLabel id="demo-simple-select-filled-label">
+              User Rating
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Side street</MenuItem>
+              <MenuItem value={20}>Main street</MenuItem>
+              <MenuItem value={30}>Park</MenuItem>
+              <MenuItem value={40}>Public spot</MenuItem>
+              <MenuItem value={50}>Playground</MenuItem>
+            </Select>
+          </FormControl>
+        </box>
         <p>
           <Button
             type="submit"
-            variant="outlined"
+            variant="filled"
             startIcon={<DoubleArrowRoundedIcon />}
             sx={{
-              color: "black",
-              borderColor: "black",
-              marginLeft: 2,
-              marginRight: 2,
-              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+              color: "white",
+              margin: 2,
+              backgroundColor: "#8242c2",
+              paddingLeft: 5,
+              paddingRight: 5,
+              "&:hover": {
+                backgroundColor: "#9e64d7",
+              },
             }}
           >
             Apply
           </Button>
           <Button
-            variant="outlined"
+            variant="filled"
             startIcon={<HighlightOffIcon />}
             sx={{
               color: "black",
-              borderColor: "black",
-              "&:hover": { backgroundColor: "#f2deff", borderColor: "black" },
+              margin: 2,
+              backgroundColor: "#d8d8d8",
             }}
           >
             Cancel
