@@ -34,12 +34,12 @@ export default function Emptyfield() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(handleSubmit, () => setButtonPopup(true))}>
         <Box
           sx={{
             "& .MuiTextField-root": {
               m: 2,
-              width: "25ch",
+              width: "80%",
             },
           }}
           noValidate
@@ -77,7 +77,11 @@ export default function Emptyfield() {
               shrink: true,
             }}
           />
-          <FormControl variant="filled" sx={{ m: 2, width: "38ch" }} required>
+          <FormControl
+            variant="filled"
+            sx={{ m: 2, width: "80%", textAlign: "left" }}
+            required
+          >
             <InputLabel id="demo-simple-select-filled-label">
               Why should this electric box be painted?
             </InputLabel>
@@ -96,16 +100,15 @@ export default function Emptyfield() {
           </FormControl>
         </Box>
         <TextField
-          sx={{ m: 2, width: "48ch" }}
+          sx={{ m: 2, width: "80%" }}
           id="outlined-multiline-static"
-          label="Describe the environment in which the box is located"
+          label="Please give further information about the electric box"
           multiline
           rows={4}
           defaultValue=""
         />
         <p>
           <Button
-            onClick={() => setButtonPopup(true)}
             type="submit"
             variant="outlined"
             startIcon={<DoubleArrowRoundedIcon />}
@@ -130,11 +133,11 @@ export default function Emptyfield() {
             Cancel
           </Button>
         </p>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <h3>Submission Succesful</h3>
+          <p>Thank you for beautifying Berlin.</p>
+        </Popup>
       </form>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h3>Submission Succesful</h3>
-        <p>Thank you for beautifying Berlin.</p>
-      </Popup>
     </>
   );
 }
