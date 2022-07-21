@@ -59,10 +59,6 @@ export default function TopBar() {
           <NavLink to="/login" className="link" activeClassName="active">
             <span className="accountchild">My Account</span>
           </NavLink>
-          <Avatar
-            sx={{ width: 50, height: 50 }}
-            src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
         </div>
       </div>
       <div onClick={handleNavLinksToggle} className="topRight">
