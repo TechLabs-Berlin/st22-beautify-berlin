@@ -3,7 +3,7 @@
 - Images: https://drive.google.com/drive/folders/18fl971UFKniAe6sH1oiclqtraRP1UB1k?usp=sharing
 - Labels: https://docs.google.com/spreadsheets/d/18sq8x2CHwXdAo_dGpg7U7yKt5J5Ix4RT8gH2lUyzw98/edit?usp=sharing
 ## Prototype
-- Current Prototype: https://www.figma.com/file/8ivTAUNeGlCChKno5PKCTR/Beautify-Berlin-Team
+- Prototype: https://www.figma.com/file/8ivTAUNeGlCChKno5PKCTR/Beautify-Berlin-Team
 ## Design
   - Purple color: rgba(100, 75, 150, 1)
   - Font: https://fonts.google.com/specimen/Inter

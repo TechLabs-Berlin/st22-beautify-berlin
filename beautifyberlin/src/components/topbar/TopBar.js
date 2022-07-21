@@ -44,11 +44,21 @@ export default function TopBar() {
                 About
               </NavLink>
             </li>
-            <li className="topListItem">Owner Login</li>
+            <li className="topListItem">
+              <NavLink
+                to="/ownerlogin"
+                className="link"
+                activeClassName="active"
+              >
+                Owner Login
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="account">
-          <span className="accountchild">My Account</span>
+          <NavLink to="/login" className="link" activeClassName="active">
+            <span className="accountchild">My Account</span>
+          </NavLink>
           <Avatar
             sx={{ width: 50, height: 50 }}
             src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

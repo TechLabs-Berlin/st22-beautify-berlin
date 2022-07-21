@@ -1,4 +1,3 @@
-import "./textfield.css";
 import React from "react";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
@@ -25,7 +24,7 @@ export default function Emptyfield() {
 
   const [reason, setReason] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     setReason(event.target.value);
   };
 
@@ -33,7 +32,7 @@ export default function Emptyfield() {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     if (name && email && address) {
@@ -41,7 +40,7 @@ export default function Emptyfield() {
     }
   };
 
-  const handleAdd = async (e) => {
+  const handleAdd = async e => {
     e.preventDefault();
     try {
       const res = await addDoc(collection(db, "cities"), {
@@ -69,21 +68,21 @@ export default function Emptyfield() {
           autoComplete="off"
         >
           <TextField
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             required
             id="outlined-required"
             label="First Name, Last Name"
             defaultValue=""
           />
           <TextField
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             required
             id="outlined-required"
             label="Email"
             defaultValue=""
           />
           <TextField
-            onChange={(e) => setAddress(e.target.value)}
+            onChange={e => setAddress(e.target.value)}
             required
             id="outlined-required"
             label="Address of the Box"

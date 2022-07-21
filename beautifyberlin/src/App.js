@@ -8,6 +8,10 @@ import AppliedSingle from "./pages/AppliedSingle/AppliedSingle";
 import Open from "./pages/Open/Open";
 import { Routes, Route, Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+import Login from "./pages/LoginUser/Login";
+import LoginOwner from "./pages/LoginOwner/LoginOwner";
+import Artistapply from "./pages/Artistapply/Artistapply";
+import Changestatus from "./pages/ChangeStatus/Changestatus";
 
 function App() {
   // const user = false;
@@ -21,6 +25,10 @@ function App() {
         <Route path="/applied/:appliedId" element={<AppliedSingle />} />
         <Route path="/upload" element={<NewBoxes />} />
         <Route path="/post/:postId" element={<BoxSingle />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/ownerlogin" element={<LoginOwner />} />
+        <Route path="/uploadapply" element={<Artistapply />} />
+        <Route path="/status" element={<Changestatus />} />
       </Routes>
       <Footer />
     </div>
