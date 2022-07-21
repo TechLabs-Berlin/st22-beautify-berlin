@@ -13,6 +13,7 @@ import {
 import { v4 } from "uuid";
 import "./PicUpload.css";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
+import { Link } from "react-router-dom";
 
 export default function PicUpload() {
   const [imageUpload, setImageUpload] = useState(null);
@@ -106,24 +107,26 @@ export default function PicUpload() {
           <div>We think the box is:</div>
         </div>
         <div className="Implement">
-          <div>AIAIAI</div>
+          <div>Art / Clean / Dirty / Poster / None</div>
         </div>
       </div>
 
       <div className="AILine">
-        <Button
-          variant="filled"
-          component="label"
-          startIcon={<PublishedWithChangesIcon />}
-          sx={{
-            color: "black",
-            margin: 2,
-            backgroundColor: "#d8d8d8",
-            padding: 1,
-          }}
-        >
-          Change status
-        </Button>
+        <Link to="/status" className="link">
+          <Button
+            variant="filled"
+            component="label"
+            startIcon={<PublishedWithChangesIcon />}
+            sx={{
+              color: "black",
+              margin: 2,
+              backgroundColor: "#d8d8d8",
+              padding: 1,
+            }}
+          >
+            Change status
+          </Button>
+        </Link>
       </div>
     </div>
   );
