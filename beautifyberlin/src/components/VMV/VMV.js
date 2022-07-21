@@ -13,7 +13,7 @@ export default function VMV() {
             <Grid item xs={12} sm={4}>
               <Paper
                 sx={{
-                  background: "#fadef9",
+                  background: "rgb(221, 221, 221)",
                   padding: "1px",
                   paddingLeft: "20px",
                   paddingRight: "20px",
@@ -30,7 +30,7 @@ export default function VMV() {
             <Grid item xs={12} sm={4}>
               <Paper
                 sx={{
-                  background: "#fadef9",
+                  background: "rgb(221, 221, 221)",
                   padding: "1px",
                   paddingLeft: "20px",
                   paddingRight: "20px",
@@ -47,7 +47,7 @@ export default function VMV() {
             <Grid item xs={12} sm={4}>
               <Paper
                 sx={{
-                  background: "#fadef9",
+                  background: "rgb(221, 221, 221)",
                   padding: "1px",
                   paddingLeft: "20px",
                   paddingRight: "20px",

@@ -4,11 +4,9 @@
 }
 
 .main-heading {
-  color: white;
+  color: black;
   font-size: 26px;
   text-align: center;
-  text-decoration: underline;
-  text-underline-offset: 5px;
 }
 
 .cards {
