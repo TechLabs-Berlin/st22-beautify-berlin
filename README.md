@@ -1,9 +1,17 @@
 # st22-beautify-berlin
-## Deep learning
+## Deep Learning
+### Deployment
+- Dedicated repository: https://github.com/allakulov/techlabs_flask_app
+- Heroku app: https://electricbox-dl.herokuapp.com/
+- Prediction endpoint API: https://electricbox-dl.herokuapp.com/predict
+### Model
+- Colab notebook: https://github.com/TechLabs-Berlin/st22-beautify-berlin/blob/main/cnn_model.ipynb
 - Images: https://drive.google.com/drive/folders/18fl971UFKniAe6sH1oiclqtraRP1UB1k?usp=sharing
 - Labels: https://docs.google.com/spreadsheets/d/18sq8x2CHwXdAo_dGpg7U7yKt5J5Ix4RT8gH2lUyzw98/edit?usp=sharing
+
 ## Prototype
 - Prototype: https://www.figma.com/file/8ivTAUNeGlCChKno5PKCTR/Beautify-Berlin-Team
+
 ## Design
   - Purple color: rgba(100, 75, 150, 1)
   - Font: https://fonts.google.com/specimen/Inter
