@@ -24,7 +24,7 @@ After the DL model was trained to a satisfactory performance level, the project 
 <img src="/pred_screenshot.png" />
 </p>
 
-In the future, the project website could easily send requests to the API endpoint for predictions. The full details pertaining to deployment of the DL application is available in the personal github repository of the DL techie: https://github.com/allakulov/techlabs_flask_app
+In the future, the project website could easily send requests to the API endpoint for predictions. The full details pertaining to deployment of the DL application are available in the personal github repository of the DL techie: https://github.com/allakulov/techlabs_flask_app
 
 ## Web development Track
 
