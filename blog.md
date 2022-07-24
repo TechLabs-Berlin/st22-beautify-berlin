@@ -132,5 +132,5 @@ The following video shows a go through our webpage. These are the steps of a typ
 6. Shwoing dditional pages About Us and both login forms.
 
 <p align="center">
-<img src="/BeautifyWebApp.mov" />
+<img src="/BeautifyWebAppFinal.mov" />
 </p>
