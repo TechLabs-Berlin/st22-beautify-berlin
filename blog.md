@@ -131,6 +131,4 @@ The following video shows a go through our webpage. These are the steps of a typ
 5. In “Applications” users can vote for their favourite painting on a seperate page.
 6. Shwoing dditional pages About Us and both login forms.
 
-<p align="center">
-<img src="/BeautifyWebAppFinal.mov" />
-</p>
+Check out the file "BeautifyWebAppFinal.mov" in main.
