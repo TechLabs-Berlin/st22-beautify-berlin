@@ -62,7 +62,7 @@ This prototype also includes the view of an owner.
 
 Besides the work on the prototype, the UX team member could use his cartographic knowledge to collect the data. There was a Web Feature Service (WFS) for electric boxes on the open data portal of Berlin available. With the help of the program QGIS, it was able to transform this data in to a GeoJSON file. To get a better name for the places, the what3words API was used to get its name. After the information, that it would not be possible to implement a map view, Open Street Map was used to reverse geocode to get address data for the places. All information are combined in this file:
 
-- [GeoJSON file](ElectricBoxesWithAdressDataAndW3W_25833.geojson)
+- [GeoJSON file](ElectricBoxesWithAdressDataAndW3W_4326.geojson) (click to open map)
 
 ## Deep Learning track
 
