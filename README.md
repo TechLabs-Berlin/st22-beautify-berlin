@@ -37,14 +37,14 @@
 
 ### Useful links
 
-React: https://reactjs.org/
-MUI: https://mui.com/
-Firebase: https://firebase.google.com/?gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDLHnvntuPxKy3sDouwmNmePnScW5jL9pdsytfLIYxRN0IzQjsXkmNYaAumyEALw_wcB&gclsrc=aw.ds
+- React: https://reactjs.org/
+- MUI: https://mui.com/
+- Firebase: https://firebase.google.com/?gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDLHnvntuPxKy3sDouwmNmePnScW5jL9pdsytfLIYxRN0IzQjsXkmNYaAumyEALw_wcB&gclsrc=aw.ds
 
 ### How to run the code
 
 1. Clone the repository.
 2. Go to the directory /beautifyberlin.
-3. Run "npm start" (starts the development server on port 3000)
+3. Run "npm start" (starts the development server on port 3000).
 
 It opens the browser at http://localhost:3000 automatically.
