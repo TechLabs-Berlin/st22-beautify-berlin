@@ -104,17 +104,17 @@ Finally, we gained a complete picture of front-end development and a very good u
 
 We started with learning the basics about front-end which are HTML and CSS. After this, JavaScript took us deeper in the facets of programming. Moreover, we learned React which is a wide-ranging and fun tool. It is a platform that is used to implement and connect everything in front-end.
 
-### Building procedure
+### Building procedure and (unsolved) issues
 
 By using React we built the setup of our web page. After we had the user stories from UX track, we started coding the components needed along with the pages. We also used MUI framework for some components, but mostly we worked mainly with plain HTML and CSS.
 
 After coding all our pages, we used React Router Dom to route and link pages with each other.
 
-For the image uploading and the implementation of the DL feature we created a database using Firebase, which seemed to be a quite efficient and fast solution, also due to the lack of a back-end developer in our team. We implemented Axios to request the DL API. Time was not enough to finalize the implementation, also with the help of our mentor, it was not possible to reach the expected outcome. Goal was to let citizen upload a picture which is saved within backend. The picture should be classified by the DL AI and the given result should be shown within a div on the web application. All other trys to access the API result within our react app failed or didnt give the expected outcome. Finally, we tried to deploy the app on Netlify but were facing an error in the html file, which is only occuring on Netlify but not on React.
+For the image uploading and the implementation of the DL feature we created a database using Firebase, which seemed to be a quite efficient and fast solution, also due to the lack of a back-end developer in our team. We implemented Axios to request the DL API (only on a branch called "IMPLEMENT" within the repository). Time was not enough to finalize the implementation, also with the help of our mentor, it was not possible to reach the expected outcome. Goal was to let citizen upload a picture which is saved within backend. The picture should be classified by the DL AI and the given result should be shown within a div on the web application. All other trys to access the API result within our react app failed or didnt give the expected outcome. Finally, we tried to deploy the app on Netlify but were facing an error in the html file, which is only occuring on Netlify but not on React.
 
 ### Working method
 
-The whole code was saved within the folder called “beautifyberlin” in our GitHub repository. We took care of an organized working folder, since both web developers were working on the same code simultaneously.
+The whole code was saved within the directory called “beautifyberlin” in our GitHub repository. We took care of an organized working folder, since both web developers were working on the same code simultaneously.
 
 Our Project has more potential like adding a map view or pursue coding on the rating with stars. Given the time frame of the project we had to work on a very strict and tight schedule. At the same time, we faced several obstacles like bugs and time-consuming issues on Git. We used around 1/3 of our working time on solving GitHub issues and 2/3 of the time on coding. However, since such problems are expected when it comes to coding, we calculated some time buffer to solve such possible issues at the planning phase of our project. That allowed us to meet the deadline and deliver a functioning app (in a front-end point of view).
 
@@ -122,13 +122,11 @@ We have improved our programming skills during the project phase and are happy w
 
 ### Go through
 
-The following video shows a go through our webpage. These are the steps of a typical User experience:
+The video "BeautifyWebAppFinal.mov" (available in main) shows a go through our webpage. The video shows a typical User experience:
 
 1. Upload of electric box by a citizen.
 2. It will show up on the “Open” to apply page.
 3. Artists can apply for it.
 4. Existing Applications will be shown in “Applications”.
 5. In “Applications” users can vote for their favourite painting on a seperate page.
-6. Shwoing dditional pages About Us and both login forms.
-
-Check out the file "BeautifyWebAppFinal.mov" in main.
+6. Showing additional pages About Us and both login forms.
