@@ -3,24 +3,14 @@ form {
   position: relative;
 }
 
-form:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: 1;
-  background-image: linear-gradient(to bottom right, #8242c2, #e66464ef);
-}
-
 form .form-inner {
   position: relative;
   display: block;
   background-color: #fff;
   padding: 30px;
   z-index: 2;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 form .form-inner .form-group {
