@@ -122,14 +122,17 @@ We have improved our programming skills during the project phase and are happy w
 
 ### Go through
 
-The video "BeautifyWebAppFinal.mov" (available in main) shows a go through our webpage. The video shows a typical User experience:
+The following video "BeautifyWebAppFinal.mov" shows a go through our webpage. The video shows a typical User experience:
 
 1. Upload of electric box by a citizen.
 2. It will show up on the “Open” to apply page.
 3. Artists can apply for it.
 4. Existing Applications will be shown in “Applications”.
 5. In “Applications” users can vote for their favourite painting on a seperate page.
-6. Showing additional pages About Us and both login forms.
+6. Showing additional pages About Us and both login forms (Owners and Artists).
+
+https://user-images.githubusercontent.com/101949025/180958911-9abba96c-e368-4ca3-8c50-a46f342b0384.mp4
+
 
 ## Data Science Track
 
