@@ -122,7 +122,7 @@ We have improved our programming skills during the project phase and are happy w
 
 ### Go through
 
-The following video "BeautifyWebAppFinal.mov" shows a go through our webpage. The video shows a typical User experience:
+The following video shows a go through our webpage. The video shows a typical User experience:
 
 1. Upload of electric box by a citizen.
 2. It will show up on the “Open” to apply page.
